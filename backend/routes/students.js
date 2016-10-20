@@ -4,7 +4,7 @@ var Student = require('../models/student')
 const _ = require('lodash');
 
 router.use(function (req, res, next) {
-  req.body = _.pick(req.body, ['firstName', 'lastName', 'salary', 'bonusPoints'])
+  req.body = _.pick(req.body, ['firstName', 'lastName', 'email', 'slackHandle', 'currentlyEnrolled'])
   next()
 })
 
